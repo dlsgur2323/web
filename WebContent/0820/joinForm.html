@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>회원가입</title>
+		<style>
+			input[type=text], input[type=password]{width:400px;height:20px;}
+			td:first-child{text-align:center;font-weight:bold;}
+			input[type=button]{border: 1px solid #3d7cc3;color: #3d7cc3;background: #FFF;font-size: 16px;}
+			input[type=submit]{color: #FFF;background: #042f6c;border: 1px solid #042f6c;font-size: 20px;}
+			table{border-collapse: collapse;}
+			p{color:#8600cf;font-size:14px;}
+		</style>
+	</head>
+	<body>
+		<div style="width:800px;margin:0 auto;">
+			<div style="border-bottom:2px solid #30438c;">
+				<img src="../img/logo.png" alt="ebs로고" style="vertical-align: middle;"><span style="font-size:25px;color:#30438c;vertical-align: middle;"><strong>회원가입</strong></span>
+			</div>
+			<br>
+			<br>
+			<br>
+			
+			<div style="clear:both;margin-left:auto;maring-right:auto;">
+				<img src="../img/icon.png">
+				<span style="font-size:20px;"><strong>정보입력 및 본인확인</strong></span>
+				<br><br>
+				<form action="../0821/result.jsp" method="post">
+					<table border="1" width="800px">
+						<tr>
+							<td style="background-color:#dedede;">아이디</td>
+							<td><input type="text" name="id"><input type="button" value="중복확인" onclick="alert('사용할 수 있는 아이디 입니다.')"></td>
+						</tr>
+						<tr>
+							<td style="background-color:#dedede;">비밀번호</td>
+							<td><input type="password" name="pwd"></td>
+						</tr>
+						<tr>
+							<td style="background-color:#dedede;">비밀번호 확인</td>
+							<td><input type="password" name="비밀번호 확인"></td>
+						</tr>
+						<tr>
+							<td style="background-color:#dedede;">이름</td>
+							<td><input type="text" name="이름"></td>
+						</tr>
+						<tr>
+							<td style="background-color:#dedede;">성별</td>
+							<td><input type="radio" name="gender" value="male">남성&nbsp;
+							<input type="radio" name="gender" value="male">여성&nbsp;
+							<input type="checkbox" name="check" value="동의">선택정보(성별) 수집 및 이용 동의</td>
+						</tr>
+						<tr>
+							<td style="background-color:#dedede;">생년월일</td>
+							<td>
+								<select name="year">
+									<option>1980</option>
+									<option>1981</option>
+									<option>1982</option>
+									<option>1983</option>
+									<option>1984</option>
+									<option>1985</option>
+									<option>1986</option>
+									<option>1987</option>
+									<option>1988</option>
+									<option>1989</option>
+									<option>1990</option>
+									<option>1991</option>
+									<option>1992</option>
+									<option>1993</option>
+									<option>1994</option>
+									<option>1995</option>
+									<option>1996</option>
+									<option>1997</option>
+									<option>1998</option>
+									<option>1999</option>
+									<option>2000</option>
+									<option>2001</option>
+									<option>2002</option>
+									<option>2003</option>
+									<option>2004</option>
+									<option>2005</option>
+									<option>2006</option>
+									<option>2007</option>
+									<option>2008</option>
+									<option>2009</option>
+									<option>2010</option>
+									<option>2011</option>
+									<option>2012</option>
+									<option>2013</option>
+									<option>2014</option>
+									<option>2015</option>
+									<option>2016</option>
+									<option>2017</option>
+									<option>2018</option>
+									<option>2019</option>
+									<option>2020</option>
+								</select>년
+								<select name="month">
+									<option>01</option>
+									<option>02</option>
+									<option>03</option>
+									<option>04</option>
+									<option>05</option>
+									<option>06</option>
+									<option>07</option>
+									<option>08</option>
+									<option>09</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+								</select>월
+								<select name="day">
+									<option>01</option>
+									<option>02</option>
+									<option>03</option>
+									<option>04</option>
+									<option>05</option>
+									<option>06</option>
+									<option>07</option>
+									<option>08</option>
+									<option>09</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+									<option>13</option>
+									<option>14</option>
+									<option>15</option>
+									<option>16</option>
+									<option>17</option>
+									<option>18</option>
+									<option>19</option>
+									<option>20</option>
+									<option>21</option>
+									<option>22</option>
+									<option>23</option>
+									<option>24</option>
+									<option>25</option>
+									<option>26</option>
+									<option>27</option>
+									<option>28</option>
+									<option>29</option>
+									<option>30</option>
+									<option>31</option>
+								</select>일
+							</td>
+						</tr>
+						<tr>
+							<td style="background-color:#dedede;">이메일</td>
+							<td><input type="text" name="emailAdrress" style="width:200px">@<input type="text" name="domain" style="width:200px"><br>
+							<p>아이디나 비밀번호를 찾기위해 사용되오니 정확한 정보로 입력하시기 바랍니다.</p></td>
+						</tr>
+						<tr>
+							<td style="background-color:#dedede;">휴대폰</td>
+							<td><input type="text" name="휴대폰" style="width:300px;">
+							<input type="checkbox" name="check" value="동의">선택정보(휴대폰) 수집 및 이용 동의<br>
+							<p>아이디나 비밀번호를 찾기위해 사용되오니 정확한 정보로 입력하시기 바랍니다.</p></td>
+						</tr>
+						<tr>
+							<td style="background-color:#dedede;">인증방법</td>
+							<td><input type="radio" name="인증방법" value="휴대폰">휴대폰&nbsp;<input type="radio" name="인증방법" value="이메일">이메일<input type="button" value="인증" onclick="alert('인증번호 : 55425')">
+							<p>휴대폰 인증을 위한 인증번호 발송은 1일 최대 3회까지 가능합니다.</p></td>
+						</tr>
+						<tr>
+							<td style="background-color:#dedede;">인증번호</td>
+							<td><input type="text" name="인증번호">&nbsp;<input type="button" value="확인" onclick="alert('인증되었습니다.')"></td>
+						</tr>
+					</table>
+					<span> ※ 교사 회원님을 위한 교사인증은 가입 후 회원정보수정에서 인증하실 수 있습니다.</sapn>
+					<br>
+			</div>
+		</div>
+				<div style="text-align: center;"">
+					<input type="submit" value="확인">
+				</div>
+				</form>
+			
+		
+		
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

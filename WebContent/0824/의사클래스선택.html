@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href="../css/public.css" rel="stylesheet">
+		
+		<style>
+			a{
+/* 				border : 2px solid blue; */
+				padding : 10px;
+				margin : 10px;
+			}
+			a:link{
+				color:green;
+				text-decoration : none; /*line-through; overline;*/
+			}
+			a:visited{
+				color: red;
+			}
+			a:hover{
+				background : lime;
+			}
+			a:active{
+				font-size : 1.5em;
+				color: blue;
+				text-decoration : underline;
+			}
+			
+			table{
+				
+			}
+			
+			td{
+				width : 200px;
+				height : 50px;
+				text-align : center;
+			}
+			
+			
+			tr:nth-child(even){ /* even : 짝수 */
+				background : lightblue;
+			}
+			
+			tr:nth-child(odd){ /* odd : 홀수 */
+				background : lightgray;
+			}
+			
+			tr:nth-child(1){
+				background : black;
+				color : white;
+			}
+			
+			#tab2 tr:nth-child(even){
+				background : orange;	
+			}
+			
+			#tab2 tr:nth-child(odd){
+				background : yellow;
+			}
+			
+			#tab2 tr:nth-child(1){
+				background : black;
+			}
+			
+			h3[title]{
+				background : skyblue;
+			}
+						
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<h3 title="상태클래스">1.의사클래스</h3>
+			상태나 구조에 의한 선택이 이루어 진다.<br>
+			상태 : :link :visited :hover :active<br>
+			구조 : :nth-child(index) nth-child(even) nth-child(odd)
+				 :nth-child(2n-1(수식))<br>
+			<input title="버튼" type="button" value="확인">
+			<br>
+			<div id="result1">
+			상태에 의한 선택 <br><br>
+				<a href="http://www.naver.com">네이버</a>
+				<a href="http://www.daum.net">다음</a>
+				<a href="coffee.html">coffee</a>
+				<a href="http://www.w3schools.com">w3school</a>
+			</div>
+		</div>
+		
+		<div class="box">
+			<h3>2.의사클래스</h3>
+			상태나 구조에 의한 선택이 이루어 진다.<br>
+			상태 : :link :visited :hover :active<br>
+			구조 : :nth-child(index) nth-child(even) nth-child(odd)
+				 :nth-child(2n-1(수식))<br>
+			<input type="button" value="확인">
+			<br>
+			<div id="result1">
+			구조에 의한 선택 <br><br>
+				<table border="1"> <!-- 테이블은 border="1"을 해줘야 테두리가 생긴다. -->
+					<tr>
+						<td>이름</td>
+						<td>주소</td>
+					</tr>
+					
+					<tr>
+						<td>홍길동</td>
+						<td>대전</td>
+					</tr>
+					
+					<tr>
+						<td>개나리</td>
+						<td>서울</td>
+					</tr>
+					
+					<tr>
+						<td>진달래</td>
+						<td>부산</td>
+					</tr>
+					
+				</table>
+				
+				<br><br>
+				
+				<table id="tab2" border="1"> <!-- 테이블은 border="1"을 해줘야 테두리가 생긴다. -->
+					<tr>
+						<td>이름</td>
+						<td>주소</td>
+					</tr>
+					
+					<tr>
+						<td>홍길동</td>
+						<td>대전</td>
+					</tr>
+					
+					<tr>
+						<td>개나리</td>
+						<td>서울</td>
+					</tr>
+					
+					<tr>
+						<td>진달래</td>
+						<td>부산</td>
+					</tr>
+					
+				</table>
+				
+			</div>
+		</div>
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

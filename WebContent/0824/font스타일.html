@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link type="text/css" rel="stylesheet" href="../css/public.css">
+		
+		<script type="text/javascript">
+		
+			window.onload= function(){
+				vp = document.querySelectorAll('p');
+			}
+		
+			function proc1(){
+				vp[0].style.color="blue";
+			}
+			
+			function proc2(){
+				vp[1].style.fontStyle="italic";
+			}
+			
+			function proc3(){
+				vp[2].style.fontWeight="bold";
+			}
+			
+			function proc4(){
+				vp[3].style.fontSize="2.0em";
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div class="box">
+		<pre>javascript : 기능 부여
+			html요소로 접근 방법 : document.getElementById('id이름')
+							 document.getElementsByTagName('tag이름') -- 여러개 있을 수 있으니 배열로 가져온다.
+							 document.getElementsByClassName('class이름') -- 이것도 마찬가지로 배열로 가져온다.
+							 document.querySelector('#아이디 이름') - id는 하나라서 괜찮은데
+							 					   ('.클래스 이름') - 클래스나 태그는 여러개일 수 있고, selector는 가장 첫번째 것만 가져온다.
+							 					   ('태그이름')
+							 document.querySelectorAll('') - All을 붙이면 여러개를 가져온다.
+							 
+			vp = document.querySelectorAll('p');</pre>
+			
+			
+			
+			<h3>font스타일</h3>
+			<div class="dd" id="div1">
+				<input type="button" value="확인" id="b1" onclick="proc1()"> 
+	 			<h2>vp[0].style.color="blue";</h2>
+				<p>커피(coffee, 한국 한자: 珈琲 가배, 문화어 : 흑차, 검은차) 또는 커피차(coffee beverage)는 커피나무 열매의 씨(커피콩)를 볶아 가루로 낸 것을 따뜻한 물과 차가운물 또는 증기로 우려내어 마시는, 쓴맛이 나는 짙은 갈색의 음료이다.</p>
+			</div>
+			<div class="dd" id="div2">
+				<input type="button" value="확인" id="b2" onclick="proc2()">
+				<h2>vp[1].style.fontStyle="italic";</h2>
+				<p>커피(coffee, 한국 한자: 珈琲 가배, 문화어 : 흑차, 검은차) 또는 커피차(coffee beverage)는 커피나무 열매의 씨(커피콩)를 볶아 가루로 낸 것을 따뜻한 물과 차가운물 또는 증기로 우려내어 마시는, 쓴맛이 나는 짙은 갈색의 음료이다.</p>
+			</div>
+			<div class="dd" id="div3">
+				<input type="button" value="확인" id="b3" onclick="proc3()">
+				<h2>vp[2].style.fontWeight="bold";</h2>
+				<p>]커피(coffee, 한국 한자: 珈琲 가배, 문화어 : 흑차, 검은차) 또는 커피차(coffee beverage)는 커피나무 열매의 씨(커피콩)를 볶아 가루로 낸 것을 따뜻한 물과 차가운물 또는 증기로 우려내어 마시는, 쓴맛이 나는 짙은 갈색의 음료이다.</p>
+			</div>
+			<div class="dd" id="div4">
+				<input type="button" value="확인" id="b4" onclick="proc4()">
+				<h2>vp[3].style.fontSize="2.0em";</h2>
+				<p>커피(coffee, 한국 한자: 珈琲 가배, 문화어 : 흑차, 검은차) 또는 커피차(coffee beverage)는 커피나무 열매의 씨(커피콩)를 볶아 가루로 낸 것을 따뜻한 물과 차가운물 또는 증기로 우려내어 마시는, 쓴맛이 나는 짙은 갈색의 음료이다.</p>
+			</div>
+		</div>
+	</body>
+</html>
