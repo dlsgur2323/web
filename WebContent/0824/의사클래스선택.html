@@ -28,7 +28,7 @@
 			}
 			
 			table{
-				
+				border-collapse : collapse;
 			}
 			
 			td{
@@ -66,7 +66,12 @@
 			h3[title]{
 				background : skyblue;
 			}
-						
+			
+			caption{
+				margin : 30px auto;
+				caption-side: bottom;
+				font-size: 1.5em;
+			}		
 		</style>
 	</head>
 	<body>
@@ -95,9 +100,13 @@
 				 :nth-child(2n-1(수식))<br>
 			<input type="button" value="확인">
 			<br>
+			테두리 합치기 border-collapse: collapse;<br>
+			테이블 제목 &lt;caption&gt;vip리스트&lt;/caption&gt;
+			<br>
 			<div id="result1">
 			구조에 의한 선택 <br><br>
 				<table border="1"> <!-- 테이블은 border="1"을 해줘야 테두리가 생긴다. -->
+				<caption>VIP리스트</caption>
 					<tr>
 						<td>이름</td>
 						<td>주소</td>
