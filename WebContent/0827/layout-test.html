@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>My Blog Page</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<style>
+			body {
+				margin : 0;
+			}
+			header {
+				width : 1200px;
+				height : 130px;
+				margin : auto;
+				background : #c9bab9;
+				text-align: center;
+			}
+			header h1 {
+				margin : 0;
+				padding-top :30px;
+			}
+			header p {
+				margin : 0;
+				padding-top :10px;
+			}
+			nav {
+				width : 1200px;
+				background : #e6e6e6;
+				height : 30px;
+				margin : auto;
+			}
+			nav span {
+				padding-left : 5px;
+				line-height: 30px;
+			}
+			aside {
+				height : 400px;
+				width : 239px;
+				border-left : 1px solid grey;
+				border-right : 1px solid grey;
+				float : left;
+			}
+			aside ul, aside h3 {
+				margin : 10px;
+			}
+			section {
+				height : 400px;
+				width : 958px;
+				border-right : 1px solid grey;
+				float : right;
+			
+			}
+			footer {
+				width : 1200px;
+				height : 100px;
+				background : #cccccc;
+				margin : auto;
+			}
+			footer p {
+				text-align: center;
+				line-height: 100px;
+			}
+			div#in {
+				width : 1200px;
+				margin : auto;
+			}
+			div#fullnav {
+				background : #e6e6e6;
+			}
+			div#fullfooter {
+				clear : both;
+				background : #cccccc;
+			}
+			div#fullheader {
+				background : #c9bab9;
+			}
+			article {
+				padding-top : 20px;
+				padding-bottom : 20px;
+				margin : auto;
+				width : 500px;
+				height : 360px;
+			}
+			article .cont {
+				margin-top : 20px;
+				border-top : 1px solid grey;
+				border-bottom : 1px solid grey;
+			}
+			aside img {
+				margin-left : 10px;
+				width : 120px;
+				height : 150px;
+			}
+			a:link	{
+				color : black;
+				text-decoration: none;
+			}
+			a:visited {
+				color : black;
+			}
+			a:hover {
+				color : blue;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="fullheader">
+			<header>
+				<h1>My Blog Page</h1>
+				<p>시멘틱 태그로 만들어진 페이지 입니다.</p>
+			</header>
+		</div>
+		<div id="fullnav">
+			<nav>
+				<span>Home</span>
+			</nav>
+		</div>
+		<div id="in">
+			<aside>
+				<h3>Links</h3>
+				<ul>
+					<li><a href="https://www.w3schools.com/">w3schools</a></li>
+					<li><a href="http://www.naver.com">Naver</a></li>
+					<li><a href="http://www.daum.net">Daum</a></li>
+				</ul>
+				<figure><img src="../img/spongebob.png" alt="스폰지밥 이미지" title="스폰지밥"><figcaption>스폰지밥</figcaption></figure>
+			</aside>
+			<section>
+				<article>
+					<div class="cont">
+					<p>
+					<h3>Semantic Tags</h3>
+						<span>
+							시멘틱 요소(Semantic elements)들은 브라우저에게 요소의 의미나 목적을 명확하게 알려주는 요소이다.
+							레이아웃을 만들 때 쓰는 것. 의미가 있는 요소라면 div보다는 시멘틱 태그를 사용해준다.
+						</span>
+					</p>
+					</div>
+					<div class="cont">
+					<p>
+					<h3>div와 span</h3>
+						<span>
+							div은 "divide"의 약자로서 페이지를 논리적인 섹션으로 분리하는데 사용되는 태그이다.
+							span요소는 인라인 요소로서 텍스트를 위한 컨테이너로 사용할 수 있다.
+						</span>
+					</p>
+					</div>
+				</article>
+			</section>
+		</div>
+		<div id="fullfooter">
+		<footer>
+			<p>Copyright (c)2019 Hong</p>
+		</footer>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
