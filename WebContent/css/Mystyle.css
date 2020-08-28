@@ -1,0 +1,234 @@
+@CHARSET "UTF-8";
+
+body {
+	margin : 0;
+}
+
+header {
+	height : 200px;	
+	background : black;
+}
+header h1 {
+	letter-spacing :10px; 
+	font-size : 60px;
+	margin: 0;
+    color: white;
+    line-height: 3;
+    text-align: center;
+}
+nav {
+	height : 50px;
+	border-bottom : 1px solid black;
+}
+nav div#navlist {
+	margin-left:auto;
+	margin-right:auto;
+	width: 713px;
+}
+nav ul {
+	padding: 0;
+	width: 729px;
+	height : 50px;
+	margin : 0;
+	list-style-type: none;
+}
+nav ul li {
+	float : left;
+	padding-top : 15px;
+	padding-left : 30px;
+	padding-right : 30px;
+}
+nav ul li h3 {
+	font-weight: bold;
+	margin : 0;
+	font-size : 20px;
+	font-family: serif;	
+}
+nav a:link {
+	color : black;
+	text-decoration: none;
+}
+nav a:visited {
+	color : black;
+}
+div#cont {
+	width : 1360px;
+	height : 600px;
+	margin : auto;
+}
+.blank {
+	clear:both;
+	height: 20px;
+	
+}
+aside {
+/* 	margin-left : 20px; */
+/* 	margin-right : 20px; */
+	width : 200px;
+	height : 100%;
+	border: 1px solid black;	
+}
+#as1 {
+	float : left;
+	border-left : none;
+	border-right : none;
+}
+#as1 h2 {
+	text-align: center;
+	background : black;
+	color : white;
+	margin-top : 0;
+	padding-top : 10px;
+	padding-bottom : 10px;
+	font-family: sans-serif;
+}
+#as1 ul {
+	list-style-type: none;
+	padding-left : 0;
+	border-bottom : 1px solid grey;
+	margin-left : 10px;
+	margin-right : 10px;
+}
+#as1 ul li {
+	list-style-type: none;
+	border-top : 1px solid grey;
+	color : grey;
+	font-weight: bold;
+}
+#as1 ul li div {
+	width : 180px;
+	height : 42px;
+}
+#as1 ul li div span{
+	padding-left : 30px;
+	line-height: 2.5;
+}
+#as1 a:link {
+	color : grey;
+	text-decoration: none;
+}
+#as1 a:visited {
+	color : grey;
+}
+#as1 ul li div:hover {
+	background-color : #e0e0e0;
+	color : black;
+}
+#as1 div#as1b {
+	width:199px;
+	position : relative;
+	top : 10px;
+	border-top : 1px solid black;
+	height : 218px;
+}
+#as2 {
+	float : left;
+	border-left : 0;
+	border-right : 0;
+}
+#as2 h2 {
+	text-align: center;
+	background : black;
+	color : white;
+	margin-top : 0;
+	padding-top : 10px;
+	padding-bottom : 10px;
+	font-family: sans-serif;
+}
+#as2 p {
+	padding-left : 20px;
+	padding-right : 20px;
+	color : grey;
+}
+#as2 #p2, #as2 #p3{	
+	width : 130px;
+	margin-left : auto;
+	margin-right : auto;
+	padding : 0px;
+	padding-top : 10px;
+	padding-bottom : 10px;
+	text-align: center;
+	color : white;
+	font-weight: bold;
+	background : grey;
+}
+#as2 #p2:hover, #as2 #p3:hover {
+	background : black;
+}
+#as2 div#cart {
+	border : 1px solid black;
+	height : 220px;
+}
+#as2 div#login {
+	position : relative;
+	top : 20px;
+	border : 1px solid black;
+	height : 357px;
+}
+section {
+	width : 960px;
+	height : 100%;
+	float : left;
+}
+section article iframe{
+	width : 960px;
+	height : 598px;
+}
+footer {
+	height : 200px;
+	background : black;
+}
+footer p {
+	padding-top : 60px;
+	text-align : center;
+	color : white;
+}
+iframe {
+	border : 0;
+}
+a:link {
+	text-decoration : none;
+}
+#as2 div#login form {
+	margin : auto;
+	width : 130px;
+}
+input[name=id], input[name=password] {
+	width : 122px;
+}
+#as2 div#login form input[type=submit]{
+	width : 130px;
+	margin-left : auto;
+	margin-right : auto;
+	padding : 0px;
+	padding-top : 10px;
+	padding-bottom : 10px;
+	text-align: center;
+	color : white;
+	font-weight: bold;
+	background : grey;
+	border : 0;
+}
+#as2 div#login form input[type=submit]:hover {
+	background : black;
+}
+
+#as2 #p3 {
+	margin-top :2px;
+}
+#as2 #p4 {
+	padding : 0;
+	font-size: 0.8em;
+}
+
+
+
+
+
+
+
+
+
+
+
+

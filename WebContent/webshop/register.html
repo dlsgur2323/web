@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style>
+			fieldset {
+				width : 290px;
+			}
+			form {
+				    width: 290px;
+    				margin: auto;
+    				margin-top: 30px;
+			}
+			input[type=submit], input[type=reset]{
+				 width : 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<form action="#">
+				<fieldset>
+					<legend>회원정보입력</legend>
+					<table>
+						<tr>
+							<td>아이디</td>
+					 		<td><input type="text" name="id"></td>
+						</tr>
+						<tr>
+							<td>패스워드</td>
+					 		<td><input type="password" name="pwd"></td>
+						</tr>
+						<tr>
+							<td>패스워드 확인</td>
+					 		<td><input type="password" name="pwd_check"></td>
+						</tr>
+						<tr>
+							<td>이름</td>
+					 		<td><input type="text" name="name"></td>
+						</tr>
+						<tr>
+							<td>휴대폰 번호</td>
+					 		<td><input type="tel" name="tel"></td>
+						</tr>
+						<tr>
+							<td>이메일</td>
+					 		<td><input type="email" name="email"></td>
+						</tr>
+						<tr>
+							<td>생일</td>
+					 		<td><input type="date" name="date"></td>
+						</tr>
+						<tr>
+							<td>홈페이지</td>
+					 		<td><input type="url" name="url"></td>
+						</tr>
+					</table>
+					<input type="radio" name="gender" value="male"><label>남성</label>
+					<input type="radio" name="gender" value="female"><label>여성</label>
+				</fieldset>
+				<br>
+				<input type="submit" value="제출">
+				<input type="reset" value="초기화">
+			</form>
+		</div>
+	</body>
+</html>
