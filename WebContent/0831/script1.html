@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<script>
+			function proc1(){
+				alert("Hello~~");
+				//date 객체를 생성
+				var now = new Date();
+// 				document.write(now);
+				// html 요소 id가 result1 인 요소를 검색
+// 				dcoument.qeurySelector("#result1");
+				let vres = document.getElementById("result1");
+				vres.innerHTML = now;
+			} 
+			function proc2(){
+				now = new Date();
+				datetime = now.toLocaleString();
+				date = now.toLocaleDateString();
+				time = now.toLocaleTimeString();
+				
+				vr2 = document.getElementById("result2");
+				vr2.innerHTML = "now.toLocaleString() : " + datetime + "<br>";
+				vr2.innerHTML += "now.toLocaleDateString() : " + date + "<br>";
+				vr2.innerHTML += "now.toLocaleTimeString() : " + time;
+			}
+		</script>
+	</head>
+	<body>
+		
+		<div class="box">
+			<h3>스크립트1</h3>
+			변수 선언 : var 변수명; let 변수명; const 변수명;<br>
+			var now = new Date();<br>
+			vres.innerHTML = now;
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"></div>
+		</div>
+		
+		<div class="box">
+			<h3>스크립트1</h3>
+			날짜 형식 변경<br>
+			now.toLocaleString()<br>
+			now.toLocaleDateString()<br>
+			now.toLocaleTimeString()<br>
+			출력<br>
+				vr2 = document.getElementById("result2")<br>
+				vr2.innerHTML = 내용<br>
+				vr2.textContent = 내용<br>
+			<input type="button" value="확인" onclick="proc2()">
+			<div id="result2"></div>
+		</div> 
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

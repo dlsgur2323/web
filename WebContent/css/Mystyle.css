@@ -208,6 +208,7 @@ input[name=id], input[name=password] {
 	font-weight: bold;
 	background : grey;
 	border : 0;
+	font-size: 1.05em;
 }
 #as2 div#login form input[type=submit]:hover {
 	background : black;

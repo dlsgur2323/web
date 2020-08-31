@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<script>
+			function proc1(){
+				in1 = prompt("첫번쨰 사람 입력", "가위 바위 보");
+				in2 = prompt("두번째 사람 입력", "가위 바위 보");
+				
+				// 비교
+				if(in1 == in2){
+					result = "비겼습니다.";
+				} else if(in1 == "가위" && in2 =="보" ||
+							in1 == "보" && in2 =="바위" ||
+								in1 == "바위" && in2 =="가위"){
+					result = "첫번째 사람이 이겼습니다.";
+				} else {
+					result = "두번째 사람이 이겼습니다.";
+				}
+					
+				// 출력
+				out = document.querySelector("#result1");
+				out.innerHTML = "첫번째 : " + in1 + "<br>";
+				out.innerHTML += "두번째 : " + in2 + "<br>";
+				out.innerHTML += "결과 : " + result;
+				
+// 				document.write("첫번째 : " + in1 + "<br>");
+// 				document.write("두번째 : " + in2 + "<br>");
+// 				document.write("결과 : " + result");
+				
+			}
+		</script>
+	</head>
+	<body>
+		
+		<div class="box">
+			<h3>가위바위보</h3>
+			두 사람의 가위 바위 보를 각각 입력한다.prompt()를 이용<br>
+			승자를 구한다<br>
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"></div>
+		</div> 
+	</body>
+</html>

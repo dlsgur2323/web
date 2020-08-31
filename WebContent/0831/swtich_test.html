@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<script>
+			function proc1(){
+				let score = prompt("점수를 입력하세요", "0~100");
+				v1 = parseInt(score/10)
+				switch(v1){
+				case 9 : case 10 :
+					res = "A학점"					
+					break;
+				case 8 :
+					res = "B학점"					
+					break;
+				case 7 :
+					res = "C학점"					
+					break;
+				case 6 :
+					res = "D학점"					
+					break;
+				default :
+					res = "F학점"					
+					break;
+				}
+				
+				document.getElementById("result1").innerHTML = "입력값 : " + score + "<br>" + " 등급 : " + res;
+				
+			}
+		</script>
+	</head>
+	<body>
+		
+		<div class="box">
+			<h3>성적구하기</h3>
+			prompt를 이용하여 점수(0~100)를 입력받는다.<br>
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"></div>
+		</div> 
+	</body>
+</html>
