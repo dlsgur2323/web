@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Math객체</title>
+		<link href="../css/public.css" rel="stylesheet">
+		
+		<script>
+		//난수 발생 ==> 고정
+		const rand = Math.floor(Math.random() * 100 + 1);
+		count = 0;
+		values = "";  //초기값을 0으로 하면 값들이 더해진다
+		
+		window.onload = function(){
+			inid = document.getElementById('in')
+		}
+		
+		//확인버튼 클릭
+		function proc1(){
+			res = "";
+			
+			invalue = inid.value.trim();  //getter
+			if(rand == invalue){
+				count ++;
+				values += invalue + "";
+				res += "정답입니다 <br>";
+				res += "난수 : " + rand + "<br>";
+				res += "입력 횟수 : " + count + "<br>";
+				res += values;  //정답일 때 values를 보여준다
+			}else if(rand > invalue){
+				res += "더 큰수로 입력하세요 <br>"
+				values += invalue + " ";  //입력한 invalue를 values에 담는다
+				count ++;
+				inid.value = "";
+				inid.focus();
+			}else{
+				res += "더 작은수로 입력하세요 <br>"
+				values += invalue + " ";
+				count ++;
+				inid.value = "";  //setter
+				inid.focus();
+			}
+			//res += values;
+			document.getElementById('result1').innerHTML = res;
+		}
+		
+		function proc2(){
+			com = ["가위", "바위", "보"];
+			// com = new Array("가위", "바위", "보")
+			random = Math.floor(Math.random()*3);
+			// com[0] com[1] com[2]
+			computer = com[random];
+			user = prompt("가위, 바위, 보 입력");
+			
+			res ="컴퓨터 : " + computer + "<br>";
+			res += "사용자 : " + user + "<br>"; 
+			if(computer==user){
+				res += "비겼습니다."
+			}else if (user == "가위" && computer == "보" || user == "바위" && computer =="가위" || user == "보" && computer == "바위"){
+				res += "사용자가 이겼습니다."
+			}else {
+				res += "컴퓨터가 이겼습니다."
+			}
+			
+			document.getElementById('result2').innerHTML = res;
+			
+		}
+		function proc3(){
+			// 배열 선언
+			lotto = new Array();
+			
+			while(lotto.length <6){
+				number = Math.floor(Math.random()*45 +1);
+				if(lotto.indexOf(number) == -1){
+					lotto.push(number);
+				}
+			}
+			lotto.sort(function(a,b){
+				//return b-a; 내림차순
+				return a-b; 오름차순
+			})
+			
+			document.getElementById('result3').innerHTML += lotto + "<br>";
+			
+		}
+		</script>
+		
+	</head>
+	<body>
+		<div class="box">
+			<h3>Math객체</h3>
+			난수를 발생한다 <br>
+			그 수를 맞추기 <br>
+			못 맞추면 힌트 부여, 입력한 횟수를 구한다 <br>
+			<input type="text" id="in">
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"></div>
+		</div>
+		<div class="box">
+			<h3>Math객체</h3>
+			가위바위보 <br>
+			computer는 배열을 이용해서 랜덤 발생<br>
+			사용자는 prompt를 이용해서 입력<br>
+			<input type="text" id="in">
+			<input type="button" value="확인" onclick="proc2()">
+			<div id="result2"></div>
+		</div>
+		<div class="box">
+			<h3>Math객체</h3>
+			로또번호(1~45)를 생성하는 프로그램 <br>
+			중복제거.배열을 이용하여 저장<br>
+			<input type="text" id="in">
+			<input type="button" value="확인" onclick="proc3()">
+			<div id="result3"></div>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<script>
+			function proc1(){
+				dres1 = document.querySelector("#result1");
+				
+				setTimeout(function(){
+					dres1.style.background = "green";
+				}, 1000)
+				
+				
+			}
+			function proc2(){
+				dres2 = document.querySelector("#result2");
+				start = document.querySelector("#start");
+				start.style.display = "none";
+				end = document.querySelector("#end");
+				end.style.display = "block";
+				a = setInterval(function(){
+					console.log(a);
+					cr = Math.floor(Math.random()*255);
+					cg = Math.floor(Math.random()*255);
+					cb = Math.floor(Math.random()*255);
+
+					cr = cr.toString(16);
+					cg = cg.toString(16);
+					cb = cb.toString(16);
+					
+					dres2.style.background = "#"+cr+cg+cb;
+				}, 100)
+				
+			}
+			function proc3(){
+				end.style.display = "none";
+				clearInterval(a);
+				start.style.display = "block";
+			}
+			function changecolor(){
+				dres2 = document.querySelector("#result2").style.background = "yellow";
+			}
+		</script>
+		<style>
+			#result1 {
+				background : red;
+			}
+			#result2 {
+				background : red;
+				padding : 10px;
+				margin : 5px;
+			}
+			input[value="종료"]{
+				display : none;
+			}
+		</style>
+	</head>
+	<body onload="changecolor()">
+		
+		<div class="box">
+			<h3>setTimeout</h3>
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"></div>
+		</div> 
+		<div class="box">
+			<h3>setInterval</h3>
+			dres2 : document.querySelector("#result2")<br>
+			dres2 : document.body : 브라우저의 색깔 변경
+			<input type="button" id="start" value="시작" onclick="proc2()">
+			<input type="button" id="end" value="종료" onclick="proc3()">
+			<div id="result2"></div>
+		</div> 
+	</body>
+</html>

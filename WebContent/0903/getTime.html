@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<script>
+			now = new Date();
+			window.onload = function(){
+				outres = document.querySelector("#result2");
+			}				
+			function proc1(){
+				myday = new Date("1996.02.04");
+// 				myday = new Date(1996, 2-1, 4);
+				
+				// 두 날 사이의 간격 구하기
+				n1 = now.getTime(); 
+				n2 = myday.getTime();
+				n3 = n1 - n2;
+				
+				console.log(n1 + "," + n2 + "," + n3);
+				
+				res = "태어난 날 : " + myday.toLocaleDateString() + "<br>";
+				res += "경과한 초 : " + n3/1000 + "<br>";
+				res += "경과한 분 : " + n3/1000/60 + "<br>";
+				res += "경과한 시 : " + n3/1000/60/60 + "<br>";
+				res += "경과한 일 : " + n3/1000/60/60/24 + "<br>";
+				res += "경과한 년도 : " + n3/1000/60/60/24/365 + "<br>";
+				
+				document.querySelector("#result1").innerHTML = res;
+			}
+			function proc2(){
+				invalue = new Date(document.getElementById("inday").value);
+				//alert(invalue);
+				res = "구입날짜 : " + invalue.toLocaleDateString() +"<br>";
+				res += "오늘날짜 : " + now.toLocaleDateString() + "<br>";
+				times = now.getTime() - invalue.getTime();
+				days = times/1000/60/60/24;
+				if(days < 0 ){
+					alert("선택오류 입니다.");
+					outres.innerHTML = "";
+					return false;
+				} else if(days <=7){
+					res += "교환/반품이 가능합니다.<br>";
+				} else {
+					res += "교환/반품이 불가능합니다.<br>";
+				}
+
+				
+				outres.innerHTML = res;
+				
+			}
+			
+		</script>
+	</head>
+	<body>
+		
+		<div class="box">
+			<h3>경과일 구하기</h3>
+			getTime() : millisec의 값으로 리턴 <br>
+			초 : miliisec의 값 / 1000 <br>
+			분 : 초 / 60 <br>
+			시 : 분 / 60 <br>
+			일 : 시 / 24 <br>
+			연 : 일 / 365 <br>
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"></div>
+		</div>
+		 
+		<div class="box">
+			<h3>경과일 구하기</h3>
+			구입날짜 : <input type="date" id="inday">
+			<input type="button" value="확인" onclick="proc2()">
+			<div id="result2"></div>
+		</div> 
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

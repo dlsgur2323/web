@@ -20,14 +20,12 @@
 					for(i=1;i<=9;i++){
 						res += number +" * " + i + " = " + (number * i) + "<br>";
 					}
+					document.querySelector("#result1").innerHTML += res;
 					
-					res += "계속 하시겠습니까?"
-					
-					cont = confirm(res);
+					cont = confirm("계속 하시겠습니까?");
 					if(!cont) break;
 					
 				}
-					document.querySelector("#result1").innerHTML = res;
 			}
 		</script>
 	</head>
