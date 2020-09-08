@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<script>
+			function proc1(){
+				ultag = document.getElementsByTagName("ul")[0];
+				litag = ultag.getElementsByTagName("li");
+				
+				res = "";
+				out = document.querySelector("#result1");
+				for(i=0; i < litag.length;i++){
+					res += litag[i].firstChild.data + "<br>";
+				}
+				out.innerHTML = res;
+				
+			}
+			function proc2(){
+				ultag = document.getElementsByTagName("ul")[1];
+				litag = ultag.getElementsByTagName("li");
+				for(i=0; i<litag.length;i++){
+					imgE = document.createElement('img');
+					imgE.src = "/webProject/img/"+litag[i].firstChild.data +".jpg";
+					imgE.style.width = "150px";
+					imgE.style.height = "150px";
+					litag[i].appendChild(imgE);
+				}
+			}
+			function proc3(th){
+				imgE = document.createElement('img');
+				imgE.src = "/webProject/img/"+ th.firstChild.data +".jpg";
+				th.appendChild(imgE);
+			}
+		</script>
+		<style>
+			.box img{
+				width : 70px;
+				height : 70px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<h3>각 아이템 요소의 text data 가져오기</h3>
+			<ul>
+				<li>List item 1</li>
+				<li>List item 2</li>
+				<li>List item 3</li>
+				<li>List item 4</li>
+				<li>List item 5</li>
+			</ul>
+			<input type="button" value="확인" onclick="proc1()">
+			<div id="result1"></div>
+		</div>
+		 
+		<div class="box">
+			<h3>새로운 이미지 생성</h3>
+			버튼을 클릭하면 각 요소에 해당하는 이미지를 생성해서 추가한다.
+			<ul>
+				<li>단풍</li>
+				<li>국화</li>
+				<li>딸기스무디</li>
+				<li>셔틀콕</li>
+				<li>수국</li>
+			</ul>
+			<input type="button" value="확인" onclick="proc2()">	
+		</div> 
+		
+		<div class="box">
+			<h3>새로운 이미지 생성</h3>
+			각각 item요소를 클릭하면 이미지 요소를 생성해서 추가한다.<br>
+			<ul>
+				<li onclick="proc3(this)">단풍</li>
+				<li onclick="proc3(this)">국화</li>
+				<li onclick="proc3(this)">딸기스무디</li>
+				<li onclick="proc3(this)">셔틀콕</li>
+				<li onclick="proc3(this)">수국</li>
+			</ul>
+		</div> 
+		
+	</body>
+</html>

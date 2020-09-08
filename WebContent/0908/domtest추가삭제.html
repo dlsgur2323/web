@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<script>
+				str = ["좋은아침", "행복한날","Hello","Happy","안녕!","Good!", "행복하세요","즐거운 코딩"];
+			function addProc1(){
+				rand = Math.floor(Math.random()*str.length);
+				ptag = document.createElement('p');
+				text = document.createTextNode(str[rand]);
+				ptag.appendChild(text);
+				div = document.getElementById("result1");
+				div.appendChild(ptag);
+				
+			}
+			function delProc1(){
+				div = document.getElementById("result1");
+				div.removeChild(div.lastChild);				
+			}
+			function addProc2(){
+				rand = Math.floor(Math.random()*str.length);
+				ptag = document.createElement('p');
+				text = document.createTextNode(str[rand]);
+				ptag.appendChild(text);
+				input = document.createElement('input');
+				input.type = "button";
+				input.value = "삭제"
+				input.click = delProc2(this);
+				ptag.appendChild(input);
+				div = document.getElementById("result2");
+				div.appendChild(ptag);
+			}
+			function delProc2(th){
+				div = document.getElementById("result2");
+				th.parentNode
+				div.removeChild(th.parentNode);			
+			}
+		</script>
+	</head>
+	<body>
+		
+		<div class="box">
+			<h3>추가/삭제</h3>
+			추가버튼 클릭하면 랜덤으로 텍스트를 생성한다.<br>
+			텍스트를 p태그를 생성하여 추가한다.<br>
+			p태그를 rwsult1에 추가한다.<br>
+			ptag = document.createElement('p');<br>
+			text = document.createTextNode(str[rand]);;<br>
+			ptag.appendChild(text);;<br>
+			div = document.getElementById("result1");;<br>
+			div.appendChild(ptag);;<br>
+				
+			<input type="button" value="추가" onclick="addProc1()">
+			<input type="button" value="삭제" onclick="delProc1()">
+			<div id="result1"></div>
+		</div> 
+		
+		<div class="box">
+			<h3>추가/삭제</h3>
+			추가버튼 클릭하면 랜덤으로 텍스트를 생성한다.<br>
+			텍스트를 p태그를 생성하여 추가한다.<br>
+			p태그를 rwsult1에 추가한다.<br>
+			ptag = document.createElement('p');<br>
+			text = document.createTextNode(str[rand]);;<br>
+			ptag.appendChild(text);;<br>
+			삭제버튼 생성
+			input = document.createElement('input')
+			input.type = "button";
+			input.value = "삭제"
+			p태그에 버튼 추가
+			ptag.appendChild(input);;<br>
+			div = document.getElementById("result2");;<br>
+			div.appendChild(ptag);;<br>
+			
+			
+			
+			<input type="button" value="추가" onclick="addProc2()">
+			<div id="result2"></div>
+		</div> 
+	</body>
+</html>
