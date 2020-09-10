@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<script>
+			function proc1(){
+				input = document.querySelector("#input")
+				invalue = input.value;
+				res = invalue + "단\n";
+				for(i=1;i<=9;i++){
+					res += invalue + " * " + i + " = " + invalue * i + "\n";
+				}
+				area = document.querySelector("textarea");
+				area.value = res;
+				
+			}
+			function proc2(){
+				name = document.querySelector("#input2").value;
+				gender = document.querySelectorAll("input[name=gender]");
+				if(gender[0].checked){
+					gender = "남자";
+				} else {
+					gender = "여자";
+				}
+				
+				hobby = document.querySelectorAll("input[name=chek]");
+				hobbys = "취미는 ";
+				has = false;
+				for(i=0;i<hobby.length;i++){
+					if(hobby[i].checked){
+						hobbys += hobby[i].value + " ";
+						has = true
+					}
+				}
+				if(!has){
+					hobbys = "당신은 취미가 없군요.\n";
+				} else {
+					hobbys += "이군요!\n";
+				}
+				res = name + "씨!\n" + "당신은 " + gender + "이고,\n"  + hobbys;
+				area = document.querySelectorAll("textarea")[1];
+				area.value = res;
+			}
+			function proc3(){
+				input = document.querySelector("select")
+				invalue = input.value;
+				res = "";
+				for(i=1;i<=9;i++){
+					res += invalue + " * " + i + " = " + invalue * i + "<br>";
+				}
+				document.querySelector("#result").innerHTML = res;
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<input id="input" type="text"> 단
+			<button onclick="proc1()">출력</button><br><br>
+			<textarea cols="22" rows="20"></textarea>
+		</div>
+		<div>
+		<form> 
+			<br><br><br><br>
+			이 름 : <input id="input2" type="text"><br><br>
+			
+			성 별 : 
+			<input type="radio" value="남자" name="gender">남자
+			<input type="radio" value="여자" name="gender">여자<br><br>
+			
+			취 미 : 
+			<input type="checkbox" name="chek" value="여행">여행
+			<input type="checkbox" name="chek" value="독서">독서
+			<input type="checkbox" name="chek" value="영화감상">영화감상
+			<input type="checkbox" name="chek" value="바둑">바둑
+			<input type="checkbox" name="chek" value="장기">장기
+			<input type="checkbox" name="chek" value="등산">등산
+			<input type="checkbox" name="chek" value="낚시">낚시<br><br>
+
+			<input type="button" onclick="proc2()" value="결과출력"><br>
+			
+			<textarea cols="60" rows="15"></textarea>
+		</form>
+		</div>
+		
+		<div>
+		<br><br><br>
+			<select>
+				<option value="1">1 단</option>
+				<option value="2">2 단</option>
+				<option value="3">3 단</option>
+				<option value="4">4 단</option>
+				<option value="5">5 단</option>
+				<option value="6">6 단</option>
+				<option value="7">7 단</option>
+				<option value="8">8 단</option>
+				<option value="9">9 단</option>
+			</select>
+			<button onclick="proc3()">출력</button><br><br>
+			<h3>결과 출력</h3>
+			<div id="result">
+			</div>
+		</div>
+		
+	</body>
+</html>

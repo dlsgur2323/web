@@ -27,15 +27,12 @@
 				input = document.createElement('input');
 				input.type = "button";
 				input.value = "삭제"
-				input.click = delProc2(this);
+				input.onclick = function(){
+					this.parentNode.remove();
+				};
 				ptag.appendChild(input);
 				div = document.getElementById("result2");
 				div.appendChild(ptag);
-			}
-			function delProc2(th){
-				div = document.getElementById("result2");
-				th.parentNode
-				div.removeChild(th.parentNode);			
 			}
 		</script>
 	</head>

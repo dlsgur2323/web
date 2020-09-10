@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link href="../css/public.css" rel="stylesheet">
+		<script>
+			function proc1(){
+				vimg = document.querySelector("img");
+// 				alert(vimg.src);
+				vsrc = vimg.src;
+				
+				if(vsrc.match("on") == null){
+					vimg.src = "../img/sw_on.png";
+				} else {
+					vimg.src = "../img/sw_off.png";
+				}
+					
+			}
+			function proc2(){
+				user = prompt("가위 바위 보");
+				str = ["가위", "바위", "보"];
+				rand = Math.floor(Math.random()*str.length);
+				com = str[rand];
+				out = document.getElementById("result");
+				if(user==com){
+					out.innerHTML = "결과 : 무승부!"
+				} else if(user=="가위" && com=="보" || user=="바위" && com=="가위"|| user=="보" && com=="바위"){
+					out.innerHTML = "결과 : 당신이 이겼습니다!"
+				} else {
+					out.innerHTML = "결과 : 당신이 졌습니다."
+				}
+				
+				userimg = document.querySelector("#user");
+				comimg = document.querySelector("#com");
+				userimg.src = "../img/" + user +"_좌.PNG";
+				comimg.src = "../img/" + com + "_우.PNG";
+			
+			}
+		</script>
+		<style>
+		.box #사람 {
+			background : yellow;
+		}
+		.box #컴퓨터 {
+			background : #de6f6f;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<h3>이미지변경</h3>
+			src의 속성값을 바꾼다 <br>
+			match()를 이용한다. => 검색 문자열이 있는지 없는지 비교한다. <br>
+			있으면 배열로 리턴 없으면 null을 리턴<br>
+			if(vsrc.match("on") == null) { off로 변경 }<br>
+			else { on 으로 변경 }
+			<img src="../img/sw_on.png" alt="sw_on" onclick="proc1()">
+			
+		</div> 
+		
+		<div class="box">
+			<h3>이미지변경</h3>
+			<table>
+				<tr>
+					<th colspan="2"><button onclick="proc2()">게임시작</button></th>
+				</tr>
+				<tr>
+					<th id="사람"><p>사람</p></th>
+					<th id="컴퓨터"><p>컴퓨터</p></th>
+				</tr>
+				<tr>
+					<td><img src="../img/바위_좌.PNG" id="user"></td>
+					<td><img src="../img/바위_우.PNG" id="com"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><p id="result"></p></td>
+				</tr>
+			</table>
+			
+		</div> 
+	</body>
+</html>
